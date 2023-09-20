@@ -1,0 +1,25 @@
+---
+- !ruby/object:Ogre
+  strength: 15
+  speed: 3
+  smell: like dirt
+- !ruby/object:Dragon
+  strength: 76
+  speed: 15
+  color: white
+- !ruby/object:Dragon
+  strength: 85
+  speed: 13
+  color: red
+- !ruby/object:Fairy
+  strength: 1
+  speed: 42
+  intelligence: 31
+- !ruby/object:Fairy
+  strength: 1
+  speed: 42
+  intelligence: 19
+- !ruby/object:Ogre
+  strength: 25
+  speed: 2
+  smell: good smell

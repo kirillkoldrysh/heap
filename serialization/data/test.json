@@ -1,0 +1,17 @@
+{
+  "name": "Alex",
+  "age": 54,
+  "gender": "male",
+  "specialization": "computers",
+  "hobbies": ["books", "basketball", "music"],
+  "eyes_color": "brown",
+  "languages": ["czech", "french", "spanish"],
+  "children": null,
+  "address": {
+    "city": "Berlin",
+    "street": "Schweinstein str.",
+    "house": "77/1",
+    "id": "31441",
+    "country": "Germany"
+  }
+}

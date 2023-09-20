@@ -1,0 +1,33 @@
+actor: AcceptanceTester
+modules:
+  enabled:
+    - WebDriver
+    - \Helper\Acceptance
+    - Db
+    - Filesystem
+  config:
+    WebDriver:
+      host: "%WEBDRIVER_HOST%"
+      port: "%WEBDRIVER_PORT%"
+      url: "%VF_WWW_URL%"
+      browser: 'chrome'
+      window_size: '1440x1080'
+      restart: true
+      clear_cookies: false
+    \Helper\Acceptance:
+      login: "%APP_LOGIN%"
+      password: "%APP_PASSWORD%"
+      vf_app: "%VF_APP_URL%"
+      ss_app: "%SS_APP_URL%"
+      vf_www: "%VF_WWW_URL%"
+      storage_path: "%STORAGE_PATH%"
+    Db:
+      dsn: "mysql:host=%DB_HOST%;dbname=%DB_NAME%;port=%DB_PORT%"
+      user: "%DB_USER%"
+      dump: 'temp/tests/_data/dump.sql'
+      port: "%DB_PORT%"
+      password: "%DB_PASSWORD%"
+      populate: true # run populator before all test
+      populator: 'mysql -u $user --password=$password -h $host -P $port -D $dbname < $dump'
+step_decorators:
+  - \Codeception\Step\TryTo
